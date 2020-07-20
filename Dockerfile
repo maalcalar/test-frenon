@@ -4,6 +4,8 @@ COPY . .
 
 ENV NODE_ENV base
 
+ENV REDIS_HOST redis
+
 ENV POSTGRES_HOST postgres
 
 ENV POSTGRES_USER postgres

@@ -15,6 +15,7 @@ const crearUsuario = async (req, res) => {
             });
         }
         const nuevo_usuario = await pool.query('SELECT * FROM usuarios ORDER BY id DESC LIMIT 1');
+        client.del(`usuario:${nuevo_usuario.rows[0].id}`);
         res.json({
             status: 200,
             message: 'Usuario creado',
@@ -68,6 +69,7 @@ const actualizarUsuario = async (req, res) => {
             });
         }
         const usuario_modificado = await pool.query('SELECT * FROM usuarios WHERE id = $1', [req.params.id]);
+        client.del(`usuario:${req.params.id}`);
         res.json({
             status: 200,
             message: 'Usuario actualizado',
@@ -86,6 +88,7 @@ const borrarUsuario = async (req, res) => {
                 stack: []
             });
         }
+        client.del(`usuario:${req.params.id}`);
         res.json({
             status: 200,
             message: 'Usuario eliminado',
