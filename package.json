@@ -1,0 +1,23 @@
+{
+  "name": "test_frenon",
+  "version": "1.0.0",
+  "description": "Test para postular a Frenon",
+  "main": "src/index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "faker": "^4.1.0",
+    "pg": "^8.3.0",
+    "redis": "^3.0.2",
+    "yenv": "^2.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Miguel Alcalá",
+  "license": "ISC"
+}
