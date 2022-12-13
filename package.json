@@ -4,7 +4,7 @@
   "description": "Test para postular a Frenon",
   "main": "src/index.js",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "faker": "^4.1.0",
     "pg": "^8.3.0",
     "redis": "^3.0.2",
